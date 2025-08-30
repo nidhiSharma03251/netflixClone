@@ -32,11 +32,11 @@ const Login = () => {
       <img src={logo} className='login-logo' alt="" />
       <div className="login-form">
         <h1>{ signState }</h1>
-        <form>
+        <form onSubmit={user_auth}>
           {signState === "Sign Up"? <input value={name} onChange={(e) =>{setName(e.target.value)}} type="text" placeholder='Your Name'/> : <></>}
           <input value={email} onChange={(e) =>{setEmail(e.target.value)}} type="email" placeholder='Email'/>
           <input value={password} onChange={(e) =>{setPassword(e.target.value)}} type="password" placeholder='Password'/>
-          <button onClick={user_auth} type='submit'>{ signState }</button>
+          <button type='submit'>{ signState }</button>
           <div className="form-help">
             <div className="remember">
               <input type="checkbox" />
